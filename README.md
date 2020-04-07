@@ -50,7 +50,7 @@ action_buffer.append(m.log_prob(action_sample))
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/jungle_trained_big.png)
 
 ## Training Speed
-The training speed with compared methods is shown in the below figure, demonstrating our superiority in speed. To re-implement this result, run script `compare.py`.
+The training speed with compared methods is shown in the below figure, demonstrating our superiority in speed.
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/perf.png)
 
 
