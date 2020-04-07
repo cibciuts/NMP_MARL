@@ -1,5 +1,9 @@
-This is the code for the paper "Neural Message-Passing for Multi-Agent Reinforcement Learning", by Dr Kha Vo and Distinguished Professor Chin-Teng Lin.
+This is the code for the paper "NEURAL MESSAGE-PASSING FOR LARGE-SCALE MULTI-AGENT REINFORCEMENT LEARNING", by Dr Kha Vo and Distinguished Professor Chin-Teng Lin.
 
-More information will be updated by 15/02/2020.
+# Dependencies
+torch 1.1
+schnetpack
+torch_scatter
+torch_sparse
 
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/scenarios.png)
