@@ -31,9 +31,10 @@ if next_to_food:
     agent.properties['kills'] += 1
     agent.current_reward += 1
 ```
-
-
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/scenarios.png)
+
+## Model
+Besides REINFORCE (Policy-Gradient), NMP-RL is implemented using `schnetpack` package. The principle of the implementation is shown as below.
 
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/jungle_init_big.png)
 
