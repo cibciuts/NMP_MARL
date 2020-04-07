@@ -16,6 +16,23 @@ torch_cluster 1.4.5
 A graph-based learning method using neural-message passing (NMP) technique is proposed to tackle large-scale multi-agent reinforcement learning (MARL) scenarios. The graph-based technique is embedded into REINFORCE, a simple but powerful policy-gradient RL algorithm. Actions are distributed in each sub-graph of a limited size to better focus on proper information and significantly reduce training time. 
 
 ## Scenarios
+Three scenarios were implemented (Jungle, Battle, Deception). For custom configuration of each scenario, please manual change the init parameters of class `GridWorld` in the corresponding notebook. For example, in Jungle scenario, initialize the scenario by
+```
+W = GridWorld(width=WIDTH, height=HEIGHT, agent_types=AGENT_TYPES, 
+                  n_agents_each_type=N_AGENTS_EACHTYPE,
+                  terminal_frame=FRAMES_PER_EPISODE) 
+```
+For custom reward mechanism or custom agents' interactions, modify method `transition()` in class `GridWorld`. For instance, the following snippet will check if this predator is next to a food cell or not. If so, increase its property `kill` by `1` and update the current reward as `+1`.
+```
+# 
+view = self.get_view(agent.pos, agent.properties['viewrange'], 'prey')
+next_to_food = True if view[0,1]>=1 or view[1,0]>=1 or view[1,2]>=1 or view[2,1]>=1 else False
+if next_to_food: 
+    agent.properties['kills'] += 1
+    agent.current_reward += 1
+```
+
+
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/scenarios.png)
 
 ![](https://github.com/cibciuts/NMP_MARL/blob/master/figures/jungle_init_big.png)
