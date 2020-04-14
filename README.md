@@ -1,5 +1,8 @@
 This is the code for the paper "NEURAL MESSAGE-PASSING FOR LARGE-SCALE MULTI-AGENT REINFORCEMENT LEARNING", by Dr Kha Vo and Distinguished Professor Chin-Teng Lin.
 
+For Nature Reviewers:
+- As requested from Nature Machine Intelligence, we will wrap up our code in a capsule in Code Ocean. The full functional code link will be provided once we receive guidelines from Nature. As a result, we would like to withdraw part of the code here to prevent the risk of plagiarism.
+
 ## Dependencies
 ```
 torch 1.1.0
